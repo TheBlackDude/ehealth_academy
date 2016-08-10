@@ -1,0 +1,17 @@
+{
+  "name": "ehealth_academy",
+  "description": "A Simple Application for eHealth-Academy",
+  "main": "app.js",
+  "authors": [
+    "Osman Jalloh"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/TheBlackDude/ehealth_academy",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
