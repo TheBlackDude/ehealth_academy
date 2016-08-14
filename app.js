@@ -5,6 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var passport = require('passport');
+// Modules for storing sessions
+var session = require('express-session');
+var MongoStore = require('connect-mongo')(session);
 
 // Routers
 var routes = require('./server/routes/index');
@@ -21,6 +25,9 @@ mongoose.connection.on('error', function(err) {
 
 var app = express();
 
+// passport Configuration
+require('./server/config/passport')(passport);
+
 // view engine setup
 app.set('views', path.join(__dirname, './server/views'));
 app.set('view engine', 'ejs');
@@ -32,6 +39,25 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// required for passport
+// secret for session
+app.use(session({
+  secret: 'keepitsecret',
+  saveUninitialized: true,
+  resave: true,
+  // Store sessions on MongoDB using express-session + connect-mongo
+ /* store: new MongoStore({
+    url: config.url,
+    collection: 'sessions'
+  })*/
+}));
+
+// Init passport authentication
+app.use(passport.initialize());
+// persistent login sessions
+app.use(passport.session());
+
 
 app.use('/', routes);
 app.use('/users', users);
