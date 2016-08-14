@@ -4,8 +4,20 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+
+// Routers
 var routes = require('./server/routes/index');
 var users = require('./server/routes/users');
+
+// Database Config
+var config = require('./server/config/databaseUrl.js');
+ // Connect the database
+mongoose.connect(config.url);
+ // Check if MongoDB is running
+mongoose.connection.on('error', function(err) {
+  console.error("MongoDB Connection Error: ", err);
+});
 
 var app = express();
 
