@@ -1,0 +1,34 @@
+[
+ {
+   "firstname": "Ooju",
+   "lastname": "Oluwafemi",
+   "age": 34,
+   "discipline": "Computer Science",
+   "email": "femtope@gmail.com",
+   "phone": "+234 803 4412280"
+ },
+ {
+   "firstname": "Amaka",
+   "lastname": "Igwe",
+   "age": 45,
+   "discipline": "IT Networking",
+   "email": "amaka@yahoo.co.uk",
+   "phone": "+224 625 34 23 22"
+ },
+ {
+   "firstname": "Ousmane",
+   "lastname": "Traore",
+   "age": 54,
+   "discipline": "Business IT",
+   "email": "--",
+   "phone": "--"
+ },
+ {
+   "firstname": "Karifa",
+   "lastname": "Sounate",
+   "age": 32,
+   "discipline": "Repair Engineer",
+   "email": "--",
+   "phone": "--"
+ }
+]
