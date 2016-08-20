@@ -5,3 +5,4 @@ ehealth_academy.sublime-workspace
 npm-debug.log
 *.pyc
 __pycache__
+db.sqlite3
