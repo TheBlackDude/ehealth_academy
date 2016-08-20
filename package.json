@@ -2,31 +2,12 @@
   "name": "ehealth_academy",
   "version": "0.0.1",
   "description": "A Simple Application for eHealth-Academy",
-  "main": "app.js",
-  "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.15.2",
-    "connect-mongo": "^1.3.2",
-    "cookie-parser": "^1.4.3",
-    "debug": "^2.2.0",
-    "ejs": "^2.5.1",
-    "express": "^4.14.0",
-    "express-session": "^1.14.0",
-    "mongoose": "^4.5.8",
-    "morgan": "^1.7.0",
-    "passport": "^0.3.2",
-    "passport-local": "^1.0.0"
-  },
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-cssmin": "^1.0.1",
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",
