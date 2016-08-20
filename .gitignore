@@ -6,3 +6,4 @@ npm-debug.log
 *.pyc
 __pycache__
 db.sqlite3
+server/db.sqlite3

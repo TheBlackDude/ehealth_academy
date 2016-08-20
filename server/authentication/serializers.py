@@ -1,12 +1,12 @@
 from django.contrib.auth import update_session_auth_hash
-from restframework import serializers
+from rest_framework import serializers
 from .models import Account
 
 
 # Serialize User credentials
 class AccountSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(write_only=True, required=True)
-    confirm_password = serializers.CharField(write_only=True, required=True)
+    password = serializers.CharField(write_only=True, required=False)
+    confirm_password = serializers.CharField(write_only=True, required=False)
 
     class Meta:
         model = Account
