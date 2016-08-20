@@ -3,3 +3,5 @@ bower_components
 ehealth_academy.sublime-project
 ehealth_academy.sublime-workspace
 npm-debug.log
+*.pyc
+__pycache__
