@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from rest_framework.routers import DefaultRouter
-from authentication.views import AccountViewSet, LoginView, LogoutView
+from authentication.views import AccountViewSet, LoginView, LogoutView, IndexView
 
 router = DefaultRouter()
 router.register(prefix='accounts', viewset=AccountViewSet)
@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^api/', include(router.urls)),
     url(r'^api/auth/login/$', LoginView.as_view(), name='login'),
     url(r'^api/auth/logout/$', LogoutView.as_view(), name='logout'),
+    url(r'^$', IndexView.as_view(), name='index'),
     url(r'^admin/', include(admin.site.urls)),
 ]

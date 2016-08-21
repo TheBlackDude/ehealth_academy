@@ -10,6 +10,14 @@ from .permissions import IsAccountOwner
 from .serializers import AccountSerializer
 
 
+class IndexView(TemplateView):
+    template_name = 'index.html'
+
+    @method_decorator(ensure_csrf_cookie)
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+
 class AccountViewSet(viewsets.ModelViewSet):
     """ API endpoint for User Account. """
     lookup_field = 'username'
