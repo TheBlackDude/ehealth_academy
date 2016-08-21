@@ -1,1 +1,36 @@
-<h1>Welcome to eHA</h1>
+{% load staticfiles %}
+<!DOCTYPE html>
+<html ng-app="eHA">
+<head>
+    <title>eHealth Academy</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'bower_components/bootstrap-material-design/dist/bootstrap-material-design.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'bower_components/ng-dialog/css/ngDialog.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'bower_components/ng-dialog/css/ngDialog-theme-default.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'bower_components/snackbar/dist/snackbar.min.css' %}" />
+
+    <base href="/" />
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <h1>Good</h1>
+        <div class="row">
+            <div class="col-xs-12 ng-view"></div>
+        </div>
+    </div>
+
+
+<script src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'bower_components/bootstrap-material-design/js/bootstrapMaterialDesign.js' %}"></script>
+<script src="{% static 'bower_components/bootstrap-material-design/js/ripples.js' %}"></script>
+<script src="{% static 'bower_components/underscore/underscore-min.js' %}"></script>
+<script src="{% static 'bower_components/angular/angular.min.js' %}"></script>
+<script src="{% static 'bower_components/angular-route/angular-route.min.js' %}"></script>
+<script src="{% static 'bower_components/ng-dialog/js/ngDialog.min.js' %}"></script>
+<script src="{% static 'bower_components/snackbar/dist/snackbar.min.js' %}"></script>
+
+</body>
+</html>
